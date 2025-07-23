@@ -18,6 +18,10 @@ driver.get("https://practice.cydeo.com")
 first_link = driver.find_element(By.TAG_NAME, "a")
 print(first_link.text)
 
+all_links = driver.find_elements(By.TAG_NAME, "a")
+
+
+
 time.sleep(2)
 
 driver.quit()

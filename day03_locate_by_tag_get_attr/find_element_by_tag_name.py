@@ -3,6 +3,14 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+"""
+         * Purple tagname
+         * Orange att name
+         * Blue att value
+         * Black text value
+         
+
+"""
 driver = webdriver.Chrome()
 
 driver.get("https://practice.cydeo.com")

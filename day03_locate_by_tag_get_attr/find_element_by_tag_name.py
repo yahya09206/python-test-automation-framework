@@ -15,13 +15,16 @@ driver = webdriver.Chrome()
 
 driver.get("https://practice.cydeo.com")
 
+# find element by tag name
 first_link = driver.find_element(By.TAG_NAME, "a")
 print(first_link.text)
 
 all_links = driver.find_elements(By.TAG_NAME, "a")
 
-
-
 time.sleep(2)
+
+# get all elements with a tag name of a and print their text and attribute
+all_links_on_page = driver.find_elements(By.TAG_NAME, "a")
+all_links_on_page.
 
 driver.quit()

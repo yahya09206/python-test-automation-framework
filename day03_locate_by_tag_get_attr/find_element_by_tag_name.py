@@ -25,6 +25,11 @@ time.sleep(2)
 
 # get all elements with a tag name of a and print their text and attribute
 all_links_on_page = driver.find_elements(By.TAG_NAME, "a")
-all_links_on_page.
+print(all_links_on_page.__sizeof__())
+
+for allLinks in all_links_on_page:
+    print(allLinks.text)
+    print(allLinks.get_attribute("href"))
+
 
 driver.quit()

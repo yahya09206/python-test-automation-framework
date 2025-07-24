@@ -31,5 +31,5 @@ for allLinks in all_links_on_page:
     print(allLinks.text)
     print(allLinks.get_attribute("href"))
 
-
+time.sleep(2)
 driver.quit()

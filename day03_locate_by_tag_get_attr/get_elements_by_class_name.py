@@ -11,6 +11,8 @@ print(element_one.text)
 
 
 # Identify first li element with class name list-group-item
+first_li_item = driver.find_element(By.CLASS_NAME,"list-group-item")
+print(first_li_item.text)
 
 
 time.sleep(2)

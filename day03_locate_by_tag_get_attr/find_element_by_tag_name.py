@@ -32,4 +32,8 @@ for allLinks in all_links_on_page:
     print(allLinks.get_attribute("href"))
 
 time.sleep(2)
+
+#Get first element with <h1> tag and get the text out of it
+first_h1_tag_element = driver.find_element(By.TAG_NAME, "h1")
+print(first_h1_tag_element.text)
 driver.quit()

@@ -7,9 +7,11 @@ driver = webdriver.Chrome()
 
 driver.get("https://search.yahoo.com")
 
-# Identify yahoo search box using CssSelector
-
+# Identify yahoo search box using CssSelector and enter text
+search_box = driver.find_element(By.CSS_SELECTOR,"input[name='p']")
+search_box.send_keys("Selenium FTW!!")
 # Can't get text using cssSelector
+
 
 # Wait a little bit
 time.sleep(3)

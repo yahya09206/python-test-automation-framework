@@ -19,6 +19,7 @@ time.sleep(3)
 
 # Clear text from searchBox
 clear_icon = driver.find_element(By.CSS_SELECTOR, "button#sbq-clear>span")
+clear_icon.click()
 
 # Type in XPATH into searchBox
 search_box.send_keys("XPATH")

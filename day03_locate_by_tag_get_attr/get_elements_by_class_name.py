@@ -25,7 +25,7 @@ print(get_all_li_items.__sizeof__())
 for all_items in get_all_li_items:
     print(all_items.text)
 
-
+# pause for 2 seconds
 time.sleep(2)
 
 driver.quit()

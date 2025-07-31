@@ -10,3 +10,7 @@ driver.get("https://practice.cydeo.com/forgot_password")
 # locate two elements using css selector and enter email
 email_box = driver.find_element(By.CSS_SELECTOR, "input[type='text']")
 email_box.send_keys("someone@someone.com")
+
+
+# locate and click retrieve button
+driver.find_element(By.XPATH, "//button[@id='form_submit']").click()

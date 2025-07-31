@@ -1,3 +1,5 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -11,6 +13,10 @@ driver.get("https://practice.cydeo.com/forgot_password")
 email_box = driver.find_element(By.CSS_SELECTOR, "input[type='text']")
 email_box.send_keys("someone@someone.com")
 
-
+time.sleep(2)
 # locate and click retrieve button
 driver.find_element(By.XPATH, "//button[@id='form_submit']").click()
+
+time.sleep(2)
+
+driver.quit()

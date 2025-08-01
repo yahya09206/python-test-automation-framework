@@ -10,21 +10,24 @@ def driver():
 
     # set up webdriver
     driver = webdriver.Chrome()
+    driver.get("https://search.yahoo.com/")
     yield driver
     driver.quit()
 
-def test_website_title(driver):
-
-    driver.get("https://practice.cydeo.com")
-    expected_title = "Practice"
-
-    actual_title = driver.title
-
-    assert actual_title == expected_title, f"Expected '{expected_title}' but got '{actual_title}'"
+# def test_website_title(driver):
+#
+#     driver.get("https://practice.cydeo.com")
+#     expected_title = "Practice"
+#
+#     actual_title = driver.title
+#
+#     assert actual_title == expected_title, f"Expected '{expected_title}' but got '{actual_title}'"
 
 def test_yahoo_title(driver):
 
+    expected_title = "Yahoo Search - Web Search"
 
+    assert expected_title == driver.title, f"Expected '{expected_title}' but got '{driver.title}'"
 
 
 

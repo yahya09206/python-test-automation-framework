@@ -7,5 +7,5 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
-def assertTitle():
-    driver.title("Practice")
+def assertTitle(driver):
+    driver.title(driver)

@@ -11,6 +11,6 @@ def test_subtract_numbers():
     assert subtract(10, 4) == 6
 
 def test_title_name():
-    title = driver.get("https://practice.cydeo.com")
+    titleName = driver.get("https://practice.cydeo.com")
 
-    assert driver.title(title)
+    assert assertTitle(driver.t)

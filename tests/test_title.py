@@ -19,7 +19,7 @@ def test_website_title(driver):
 
     actual_title = driver.title
 
-
+    assert actual_title == expected_title, f"Expected '{expected_title}' but got '{actual_title}'"
 
 
 

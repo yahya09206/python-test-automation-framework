@@ -22,5 +22,9 @@ def test_website_title(driver):
 
     assert actual_title == expected_title, f"Expected '{expected_title}' but got '{actual_title}'"
 
+def test_yahoo_title(driver):
+
+
+
 
 

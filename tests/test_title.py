@@ -14,3 +14,12 @@ def driver():
 
 def test_website_title(driver):
 
+    driver.get("https://practice.cydeo.com")
+    expected_title = "Practice"
+
+    actual_title = driver.title
+
+
+
+
+

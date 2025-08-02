@@ -36,3 +36,5 @@ def test_search_page_title(driver):
 
     search_box = driver.find_element(By.XPATH, "//div/input[@id='yschsp']")
     search_box.send_keys("Selenium", Keys.ENTER)
+
+    assert driver.title.startswith("Selenium")

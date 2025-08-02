@@ -4,3 +4,10 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 import os
+
+class Driver:
+
+    _driver = None
+
+    @classmethod
+    def get_driver(cls):

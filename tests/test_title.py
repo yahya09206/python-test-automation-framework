@@ -1,5 +1,6 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 @pytest.fixture(scope="module")
@@ -32,6 +33,4 @@ def test_yahoo_title(driver):
 
 def test_search_page_title(driver):
 
-
-
-
+    search_box = driver.find_element(By.)

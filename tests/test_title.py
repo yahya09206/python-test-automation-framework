@@ -30,4 +30,8 @@ def test_yahoo_title(driver):
     assert expected_title == driver.title, f"Expected '{expected_title}' but got '{driver.title}'"
 
 
+def test_search_page_title(driver):
+
+
+
 

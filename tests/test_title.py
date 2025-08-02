@@ -1,5 +1,6 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
@@ -33,4 +34,5 @@ def test_yahoo_title(driver):
 
 def test_search_page_title(driver):
 
-    search_box = driver.find_element(By.)
+    search_box = driver.find_element(By.XPATH, "//div/input[@id='yschsp']")
+    search_box.send_keys("Selenium", Keys.ENTER)

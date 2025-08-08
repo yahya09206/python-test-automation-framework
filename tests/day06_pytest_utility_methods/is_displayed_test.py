@@ -21,6 +21,8 @@ def test_error_message(driver):
     # xpath for error message
     x_path_for_error_message = "//small[.='first name must be more than 2 and less than 64 characters long']"
 
+    # Error message will only be displayed after user attempts to login with 2 or less characters
     string_error_element = driver.find_element(By.XPATH,x_path_for_error_message)
     print(string_error_element.is_displayed())
+    assert string_error_element.is_displayed()
 

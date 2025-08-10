@@ -32,5 +32,6 @@ def test_error_message(driver):
     first_name_field.send_keys("a")
 
     print(string_error_element.is_displayed())
+    # assert that error message is being displayed
     assert string_error_element.is_displayed()
 

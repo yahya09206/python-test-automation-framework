@@ -27,6 +27,12 @@ def test_login(driver):
 
     time.sleep(2)
 
+    success_message = driver.find_element(By.XPATH, "//div/div[@class='flash success']")
+
+    expected_result = "You logged into a secure area!"
+
+    assert success_message.text.startswith(expected_result)
+
 
 
 

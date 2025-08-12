@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -22,6 +24,8 @@ def test_login(driver):
     driver.find_element(By.XPATH, "//div/input[@name='username']").send_keys("tomsmith")
     driver.find_element(By.XPATH, "//div/input[@name='password']").send_keys("SuperSecretPassword")
     driver.find_element(By.ID, "wooden_spoon").click()
+
+    time.sleep(2)
 
 
 

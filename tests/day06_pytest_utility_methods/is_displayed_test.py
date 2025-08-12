@@ -26,7 +26,9 @@ def test_error_message(driver):
     # Error message will only be displayed after user attempts to log in with 2 or fewer characters
     string_error_element = driver.find_element(By.XPATH,x_path_for_error_message)
     print(string_error_element.is_displayed())
-    # assert string_error_element.is_displayed()
+    # assert string_error_element != string_error_element.is_displayed()
+
+    time.sleep(2)
 
     first_name_field = driver.find_element(By.NAME, "firstname")
     first_name_field.send_keys("a")

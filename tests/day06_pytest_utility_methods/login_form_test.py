@@ -33,6 +33,18 @@ def test_login(driver):
 
     assert success_message.text.startswith(expected_result)
 
+    driver.find_element(By.LINK_TEXT, "Logout").click()
+
+    success_messages = driver.find_element(By.XPATH, "//div/div[@class='flash success']")
+
+    expected_results = "You logged out of the secure area!"
+
+    assert success_messages.text.startswith(expected_results)
+
+
+
+
+
 
 
 

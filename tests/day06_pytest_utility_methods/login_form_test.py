@@ -41,7 +41,12 @@ def test_login(driver):
 
     expected_results = "You logged out of the secure area!"
 
+    time.sleep(2)
+
     assert success_messages.text.startswith(expected_results)
+
+    time.sleep(2)
+
 
 
 

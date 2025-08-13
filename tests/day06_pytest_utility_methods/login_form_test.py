@@ -47,6 +47,8 @@ def test_login(driver):
 
     time.sleep(2)
 
+def test_logout(driver):
+
 
 
 

@@ -41,19 +41,18 @@ def test_logout(driver):
     driver.find_element(By.XPATH, "//div/input[@name='password']").send_keys("SuperSecretPassword")
     driver.find_element(By.ID, "wooden_spoon").click()
 
-    time.sleep(2)
-
-    driver.find_element(By.LINK_TEXT, "Logout").click()
 
     time.sleep(2)
 
-    success_messages = driver.find_element(By.XPATH, "//div/div[@class='flash success']")
-
-    expected_results = "You logged out of the secure area!"
+    driver.find_element(By.XPATH, "//div/a[@href='/logout']").click()
 
     time.sleep(2)
 
-    assert success_messages.text.startswith(expected_results)
+    success_message = driver.find_element(By.XPATH, "//div/div[@class='flash success']")
+
+    expected_result = "You logged out of the secure area!\n×"
+
+    assert success_message.text == expected_result
 
 
 

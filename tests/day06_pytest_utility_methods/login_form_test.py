@@ -33,6 +33,16 @@ def test_login(driver):
 
     assert success_message.text.startswith(expected_result)
 
+
+def test_logout(driver):
+
+    # enter credentials into form to log in
+    driver.find_element(By.XPATH, "//div/input[@name='username']").send_keys("tomsmith")
+    driver.find_element(By.XPATH, "//div/input[@name='password']").send_keys("SuperSecretPassword")
+    driver.find_element(By.ID, "wooden_spoon").click()
+
+    time.sleep(2)
+
     driver.find_element(By.LINK_TEXT, "Logout").click()
 
     time.sleep(2)
@@ -44,10 +54,6 @@ def test_login(driver):
     time.sleep(2)
 
     assert success_messages.text.startswith(expected_results)
-
-    time.sleep(2)
-
-def test_logout(driver):
 
 
 

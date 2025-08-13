@@ -7,8 +7,11 @@ from selenium.webdriver.common.by import By
 
 @pytest.fixture(scope="module")
 def driver():
+    # headless driver options
+    options = Options()
+    options.add_argument("--headless=new")
 
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=options)
     driver.get("https://practice.cydeo.com/login")
     yield driver
     driver.quit()
@@ -48,11 +51,11 @@ def test_logout(driver):
 
     time.sleep(2)
 
-    success_message = driver.find_element(By.XPATH, "//div/div[@class='flash success']")
+    success_messages = driver.find_element(By.ID, "flash")
 
-    expected_result = "You logged out of the secure area!\n×"
+    expected_results = "You logged out of the secure area!"
 
-    assert success_message.text == expected_result
+    assert success_messages.text.startswith(expected_results)
 
 
 

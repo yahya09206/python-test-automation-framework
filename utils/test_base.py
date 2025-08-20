@@ -2,8 +2,11 @@ import os
 import unittest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 
 
 class TestBase(unittest.TestCase):
@@ -20,6 +23,15 @@ class TestBase(unittest.TestCase):
                 options=chrome_options
             )
         elif browser == "firefox":
+            firefox_options = FirefoxOptions()
+            firefox_options.add_argument("--headless=new")
+            self.driver = webdriver.Firefox(
+                service=FirefoxService(GeckoDriverManager().install()),
+                options=firefox_options
+            )
+        else:
+            raise ValueError(f"Unsupported browser: (browser)")
+
 
 
 

@@ -13,7 +13,7 @@ class TestBase(unittest.TestCase):
         browser = os.getenv("BROWSER", "chrome").lower() # default will = chrome
 
         if browser == "chrome":
-            chrome_options = ChromeOptions
+            chrome_options = ChromeOptions()
             chrome_options.add_argument("--headless=new")
             self.driver = webdriver.Chrome(
                 service=ChromeService(ChromeDriverManager().install()),

@@ -19,5 +19,7 @@ class TestBase(unittest.TestCase):
                 service=ChromeService(ChromeDriverManager().install()),
                 options=chrome_options
             )
+        elif browser == "firefox":
+
 
 

@@ -33,5 +33,8 @@ class TestBase(unittest.TestCase):
             raise ValueError(f"Unsupported browser: (browser)")
 
 
+    def tearDown(self):
+        if self.driver:
+            self.driver.quit()
 
 

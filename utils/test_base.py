@@ -21,7 +21,7 @@ class TestBase(unittest.TestCase):
                 service=ChromeService(ChromeDriverManager().install()),
                 options=chrome_options,
             )
-            #self.driver.implicitly_wait(10)
+            self.driver.implicitly_wait(10)
         elif browser == "firefox":
             firefox_options = FirefoxOptions()
             firefox_options.add_argument("--headless=new")

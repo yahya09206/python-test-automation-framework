@@ -7,14 +7,14 @@ from selenium.webdriver.common.by import By
 
 # pytest module to cover scope
 @pytest.fixture(scope="module")
-def driver(self):
+def driver():
     # headless driver options
     options = Options()
     options.add_argument("--headless")
 
     # set up webdriver
     driver = webdriver.Chrome()
-    self.driver.get("https://practice.cydeo.com/registration_form")
+    driver.get("https://practice.cydeo.com/registration_form")
     yield driver
     driver.quit()
 

@@ -6,4 +6,4 @@ class YahooSearchTest(TestBase):
     def test_yahoo_search_home_page(self):
         self.driver.get("https://search.yahoo.com")
         expected_title = "Yahoo Search - Web Search"
-        assert expected_title == driver.title, f"Expected '{expected_title}' but got '{driver.title}'"
+        assert expected_title == self.driver.title, f"Expected '{expected_title}' but got '{driver.title}'"

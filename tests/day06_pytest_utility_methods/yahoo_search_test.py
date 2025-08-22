@@ -1,3 +1,5 @@
+import time
+
 from day02_locators.get_element_attribute import driver
 from utils.test_base import TestBase
 from selenium.webdriver.common.by import By
@@ -16,6 +18,6 @@ class YahooSearchTest(TestBase):
 
     def test_yahoo_search_results_page(self):
         self.driver.get("https://search.yahoo.com")
-        driver.find_element(By.NAME, "p").send_keys("selenium" + Keys.ENTER)
-
+        self.driver.find_element(By.ID, "s").send_keys("selenium" + Keys.ENTER)
+        time.sleep(2)
         assert self.driver.title.startswith("selenium")

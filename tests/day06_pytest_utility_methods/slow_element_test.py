@@ -8,3 +8,5 @@ class SlowElementTest(TestBase):
         self.driver.get("https://practice.cydeo.com/dynamic_controls")
         self.driver.find_element(By.XPATH, "//button[.='Remove']").click()
 
+        its_gone = self.driver.find_element(By.ID, "message")
+        print(its_gone.text)

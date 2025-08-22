@@ -17,7 +17,6 @@ class TestBase(unittest.TestCase):
 
         if browser == "chrome":
             chrome_options = ChromeOptions()
-            chrome_options.add_argument("--headless=new")
             self.driver = webdriver.Chrome(
                 service=ChromeService(ChromeDriverManager().install()),
                 options=chrome_options

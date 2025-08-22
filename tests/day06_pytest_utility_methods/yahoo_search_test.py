@@ -18,6 +18,5 @@ class YahooSearchTest(TestBase):
 
     def test_yahoo_search_results_page(self):
         self.driver.get("https://search.yahoo.com")
-        self.driver.find_element(By.ID, "s").send_keys("selenium" + Keys.ENTER)
-        time.sleep(2)
+        self.driver.find_element(By.ID, "sf").send_keys("selenium" + Keys.ENTER)
         assert self.driver.title.startswith("selenium")

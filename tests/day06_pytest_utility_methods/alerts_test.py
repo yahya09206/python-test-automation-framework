@@ -1,6 +1,5 @@
 import time
 
-from tests.day05_css_xpath_pytest.test_title import driver
 from utils.test_base import TestBase
 from selenium.webdriver.common.by import By
 
@@ -15,4 +14,4 @@ class AlertsTest(TestBase):
         print(self.driver.switch_to.alert.text)
         time.sleep(2)
         self.driver.switch_to.alert.accept()
-
+        time.sleep(2)

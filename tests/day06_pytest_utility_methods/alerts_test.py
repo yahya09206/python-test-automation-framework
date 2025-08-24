@@ -12,3 +12,4 @@ class AlertsTest(TestBase):
         time.sleep(2)
 
         print(self.driver.switch_to.alert.text)
+

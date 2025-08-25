@@ -20,4 +20,4 @@ class AlertsTest(TestBase):
         time.sleep(2)
         self.driver.switch_to.alert.send_keys("Hello")
         time.sleep(2)
-        self.driver.switch_to.alert.accept()
+        #self.driver.switch_to.alert.accept()

@@ -17,7 +17,6 @@ class AlertsTest(TestBase):
         time.sleep(2)
 
         self.driver.find_element(By.XPATH, "//button[.='Click for JS Prompt']").click()
-        time.sleep(2)
         self.driver.switch_to.alert.send_keys("Hello")
-        time.sleep(2)
+        time.sleep(10)
         #self.driver.switch_to.alert.accept()

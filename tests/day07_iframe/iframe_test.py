@@ -16,4 +16,5 @@ class IframeTest(TestBase):
         actual_text = paragraph_tag.text
         print(paragraph_tag.text)
 
+        # assert p tag is the same
         assert expected_text in actual_text

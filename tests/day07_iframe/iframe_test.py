@@ -12,6 +12,7 @@ class IframeTest(TestBase):
 
         # locate p tag inside of iframe
         paragraph_tag = self.driver.find_element(By.TAG_NAME, "p")
+        # expected text
         expected_text = "Your content goes here."
         actual_text = paragraph_tag.text
         print(paragraph_tag.text)

@@ -1,3 +1,5 @@
+import time
+
 from utils.test_base import TestBase
 
 from selenium.webdriver.common.by import By
@@ -11,3 +13,6 @@ class FileUpload(TestBase):
         file_input_field.send_keys(file_path)
 
         self.driver.find_element(By.XPATH, "//input[@id='file-submit']").click()
+        time.sleep(2)
+
+        success_message = self.driver.find_element(By.XPATH,"//h3[.='File Uploaded!']")

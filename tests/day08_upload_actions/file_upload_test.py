@@ -1,6 +1,8 @@
 from utils.test_base import TestBase
 
-
+from selenium.webdriver.common.by import By
 class FileUpload(TestBase):
     def test_file_upload(self):
+
         self.driver.get("https://practice.cydeo.com/upload")
+        file_input_field = self.driver.find_element(By.ID, "file-upload")

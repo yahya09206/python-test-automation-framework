@@ -6,3 +6,5 @@ class FileUpload(TestBase):
 
         self.driver.get("https://practice.cydeo.com/upload")
         file_input_field = self.driver.find_element(By.ID, "file-upload")
+
+        file_path = "/Users/yahyahussein91/Desktop/photo-1756474215990-a18a9a0521d5.avif"

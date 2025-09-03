@@ -16,3 +16,5 @@ class FileUpload(TestBase):
         time.sleep(2)
 
         success_message = self.driver.find_element(By.XPATH,"//h3[.='File Uploaded!']")
+        assert success_message.is_displayed()
+        time.sleep(3)

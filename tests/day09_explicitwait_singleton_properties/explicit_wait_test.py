@@ -1,3 +1,6 @@
+from selenium.webdriver.support.expected_conditions import visibility_of_element_located
+from selenium.webdriver.support.wait import WebDriverWait
+
 from utils.test_base import TestBase
 
 from selenium.webdriver.common.by import By
@@ -8,3 +11,6 @@ class ExplicitWaitTest(TestBase):
         self.driver.get("practice.cydeo.com/dynamic_controls")
 
         self.driver.find_element(By.PARTIAL_LINK_TEXT, "Example 7").click()
+
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(visibility_of_element_located(By.XPATH, "//img[@alt='square pants']"))

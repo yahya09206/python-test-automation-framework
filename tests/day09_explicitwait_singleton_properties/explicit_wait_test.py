@@ -14,3 +14,5 @@ class ExplicitWaitTest(TestBase):
 
         wait = WebDriverWait(self.driver, 10)
         wait.until(visibility_of_element_located(By.XPATH, "//img[@alt='square pants']"))
+
+        print("THE END")

@@ -19,3 +19,8 @@ class ExplicitWaitTest(TestBase):
         print("THE END")
 
     def test_by_text_to_be(self):
+        self.driver.get("https://practice.cydeo.com/dynamic_loading")
+
+        self.driver.find_element(By.PARTIAL_LINK_TEXT, "Example 7").click()
+
+        alert_area = self.driver.find_element(By.ID, "alert-area")

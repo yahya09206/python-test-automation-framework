@@ -13,6 +13,6 @@ class ExplicitWaitTest(TestBase):
         self.driver.find_element(By.PARTIAL_LINK_TEXT, "Example 7").click()
 
         wait = WebDriverWait(self.driver, 10)
-        wait.until(visibility_of_element_located((By.XPATH, "//img[contains(@alt, 'SquarePants') or contains(@alt, 'square')]") ))
+        wait.until(visibility_of_element_located((By.XPATH, "//img[contains(@alt, 'square')]") ))
 
         print("THE END")

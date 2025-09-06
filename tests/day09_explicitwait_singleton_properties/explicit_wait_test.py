@@ -30,3 +30,5 @@ class ExplicitWaitTest(TestBase):
         wait.until(visibility_of_element_located((By.XPATH, "//img[contains(@alt, 'square')]")))
 
 
+
+

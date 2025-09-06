@@ -23,4 +23,7 @@ class ExplicitWaitTest(TestBase):
 
         self.driver.find_element(By.PARTIAL_LINK_TEXT, "Example 7").click()
 
-        alert_area = self.driver.find_element(By.ID, "alert-area")
+        alert_area = self.driver.find_element(By.ID, "alert")
+        print(alert_area.text)
+
+

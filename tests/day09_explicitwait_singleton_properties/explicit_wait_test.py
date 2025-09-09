@@ -28,7 +28,7 @@ class ExplicitWaitTest(TestBase):
         print(alert_area.text)
 
         wait = WebDriverWait(self.driver, 10)
-        # wait until element is visible
+        # wait until an element is visible
         wait.until(visibility_of_element_located((By.XPATH, "//img[contains(@alt, 'square')]")))
 
 

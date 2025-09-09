@@ -8,3 +8,5 @@ class WebOrderTest(TestBase):
         self.driver.get("http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx")
 
         self.driver.find_element(By.ID, "ctl00_MainContent_username").send_keys("Tester")
+        self.driver.find_element(By.ID, "ctl00_MainContent_password").send_keys("test")
+        self.driver.find_element(By.ID, "ctl00_MainContent_login_button").click()

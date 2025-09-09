@@ -1,3 +1,5 @@
+import time
+
 from utils.test_base import TestBase
 
 from selenium.webdriver.common.by import By
@@ -10,3 +12,5 @@ class WebOrderTest(TestBase):
         self.driver.find_element(By.ID, "ctl00_MainContent_username").send_keys("Tester")
         self.driver.find_element(By.ID, "ctl00_MainContent_password").send_keys("test")
         self.driver.find_element(By.ID, "ctl00_MainContent_login_button").click()
+
+        time.sleep(3)

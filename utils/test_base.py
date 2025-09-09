@@ -12,7 +12,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 class TestBase(unittest.TestCase):
 
     def setUp(self):
-        """Setup WebDriver before each test."""
+        """Set up WebDriver before each test."""
         browser = os.getenv("BROWSER", "chrome").lower() # default will = chrome
 
         if browser == "chrome":

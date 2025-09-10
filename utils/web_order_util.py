@@ -10,4 +10,10 @@ class WebOrderUtil:
         """Open the WebOrder application"""
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx")
 
+    @staticmethod
+    def login(driver):
+        driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester");
+        driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("test");
+        driver.findElement(By.id("ctl00_MainContent_login_button")).click();
+
 

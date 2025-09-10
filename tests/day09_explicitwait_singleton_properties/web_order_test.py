@@ -19,5 +19,9 @@ class WebOrderTest(TestBase):
 
 
     def test_web_order_method(self):
+
         WebOrderUtil.open_web_order_app(self.driver)
         WebOrderUtil.login(self.driver)
+
+if __name__ == "__main__":
+    unittest.main()

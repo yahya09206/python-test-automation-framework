@@ -1,3 +1,4 @@
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -15,5 +16,4 @@ class WebOrderUtil:
         driver.findElement(By.ID, "ctl00_MainContent_username").sendKeys("Tester")
         driver.findElement(By.ID, "ctl00_MainContent_password").sendKeys("test")
         driver.findElement(By.ID, "ctl00_MainContent_login_button").click()
-
 

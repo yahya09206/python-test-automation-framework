@@ -12,8 +12,8 @@ class WebOrderUtil:
 
     @staticmethod
     def login(driver):
-        driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester");
-        driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("test");
-        driver.findElement(By.id("ctl00_MainContent_login_button")).click();
+        driver.findElement(By.ID, "ctl00_MainContent_username").sendKeys("Tester")
+        driver.findElement(By.ID, "ctl00_MainContent_password").sendKeys("test")
+        driver.findElement(By.ID, "ctl00_MainContent_login_button").click()
 
 

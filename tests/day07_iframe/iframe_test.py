@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 
 class IframeTest(TestBase):
     def test_for_iframe(self):
+        # navigate to test site
         self.driver.get("https://practice.cydeo.com/iframe")
 
         iframe_element = self.driver.find_element(By.CSS_SELECTOR, "iframe[title^='Rich Text Area']")
